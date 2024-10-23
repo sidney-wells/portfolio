@@ -22,3 +22,33 @@ Open [http://localhost:6006](http://localhost:6006) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Dependencies
+
+Install nvm
+```
+brew install nvm
+# set to path
+source $(brew --prefix nvm)/nvm.sh
+# check version
+nvm -v # 0.40.1
+```
+
+Install node 
+```
+nvm install 20 
+node -v # v20.18.0
+```
+
+Install yarn
+```
+brew install yarn
+# or 
+brew upgrade yarn 
+# then
+yarn -v # 1.22.22
+```
+
+Install storybook
+```
+npx storybook@latest init
+```
