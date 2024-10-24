@@ -36,6 +36,7 @@ nvm -v # 0.40.1
 Install node 
 ```
 nvm install 20 
+nvm use 20
 node -v # v20.18.0
 ```
 
