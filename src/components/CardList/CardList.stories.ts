@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 // import { fn } from '@storybook/test';
-import { Card } from './Card';
+import { Card } from './CardList';
 
 const meta = {
-  title: 'Example/Card',
+  title: 'Example/CardList',
   component: Card,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -23,20 +23,12 @@ const meta = {
     // onLogout: fn(),
     // onCreateAccount: fn(),
   },
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof CardList>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Single: Story = {
-  args: {
-    image: '',
-    content: '',
-    children: 'This is child'
-  },
-};
-
-export const ListOfCards: Story = {
+export const Primary: Story = {
   args: {
     image: '',
     content: '',

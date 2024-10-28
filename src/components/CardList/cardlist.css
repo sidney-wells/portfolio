@@ -1,0 +1,42 @@
+.storybook-cardlist {
+  border: 10px solid #333(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black(0, 0%, 0%, 0.5);
+  padding: 20px;
+  /* margin: 10px; */
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+  background-color: white;
+  
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+}
+
+/* .storybook-card svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.storybook-card h1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px 0 6px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.storybook-card button + button {
+  margin-left: 10px;
+}
+
+.storybook-card .welcome {
+  margin-right: 10px;
+  color: #333;
+  font-size: 14px;
+} */
