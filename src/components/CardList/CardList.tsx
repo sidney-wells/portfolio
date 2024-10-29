@@ -1,31 +1,32 @@
 import React from 'react';
 import { Button } from '../Button/Button';
 import { Card } from '../Card/Card';
+import './cardlist.css';
 
-import './card.css';
+type CardContent = {
+  image: string;
+  description: string;
+  link: string;
+};
 
-export interface CardProps {
-  list: typeof Card[];
+export interface CardListProps {
+  cards: CardContent[];
   empty: boolean;
 }
 
-export const CardList = ({ empty, list, ...props }: CardProps) => {
+export const CardList = ({ empty, cards, ...props }: CardListProps) => {
     if (empty) {
       return (
         <div className={['storybook-card'].join(' ')} {...props}>
         <Button label="Hello this is a button" />
-        {children}
       </div>
       )
     }
     else {
-      return (
-        {list.map(card => {
-          return (
-            <Card card />
-          )
-        })}
-        
-       )
+      {cards.forEach(card => {
+        return (
+          <Card content={card} />
+        )
+      })}
     }
 };

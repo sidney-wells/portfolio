@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
-import { Card } from "./Card";
+import { Image } from "./Image";
 
 const meta = {
-  title: "Example/Card",
-  component: Card,
+  title: "Example/Image",
+  component: Image,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   parameters: {
@@ -15,7 +15,7 @@ const meta = {
         { name: "Light", value: "white" },
         { name: "Dark", value: "#333" },
       ],
-      default: "Dark",
+      default: "Light",
     },
   },
   args: {
@@ -23,17 +23,15 @@ const meta = {
     // onLogout: fn(),
     // onCreateAccount: fn(),
   },
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof Image>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Single: Story = {
+export const Primary: Story = {
   args: {
-    content: {
-      image: "./styling.png",
-      description: "This is the description",
-      link: "https://wwww.google.com",
-    },
+    src: "./styling.png",
+    alt: "This is the image alt",
+    link: "https://www.google.com",
   },
 };

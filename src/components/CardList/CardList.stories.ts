@@ -1,22 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
-import { Card } from './CardList';
+import { CardList } from "./CardList";
 
 const meta = {
-  title: 'Example/CardList',
-  component: Card,
+  title: "Example/CardList",
+  component: CardList,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'center',
-    background: {
-      values: [
-        { name: 'Light', value: 'white'},
-        { name: 'Dark', value: '#333'}
-      ],
-      default: 'Dark'
-    }
+    layout: "center",
   },
   args: {
     // onLogin: fn(),
@@ -30,8 +23,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    image: '',
-    content: '',
-    children: 'These are children'
+    empty: false,
+    cards: [
+      {
+        image: "",
+        description: "",
+        link: "",
+      },
+      {
+        image: "",
+        description: "",
+        link: "",
+      },
+    ],
   },
 };
