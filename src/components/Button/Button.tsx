@@ -10,6 +10,7 @@ export interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
   /** Button contents */
   label: string;
+  /** Classname applies css to component */
   /** Optional click handler */
   onClick?: () => void;
 }
