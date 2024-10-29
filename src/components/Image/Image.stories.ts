@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
-import { Image } from "./Image";
+import Image from ".";
 
 const meta = {
   title: "Example/Image",
@@ -33,5 +33,7 @@ export const Primary: Story = {
     src: "./styling.png",
     alt: "This is the image alt",
     link: "https://www.google.com",
+    width:150,
+    height:150
   },
 };

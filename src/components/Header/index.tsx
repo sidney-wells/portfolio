@@ -1,18 +1,22 @@
 import React from 'react';
-import { Button } from '../Button/Button';
-import './layout.css';
+
+import { Button } from '../Button';
+import './header.css';
 
 type User = {
   name: string;
 };
 
-export interface LayoutProps {
-  content: boolean
+export interface HeaderProps {
+  user?: User;
+  onLogin?: () => void;
+  onLogout?: () => void;
+  onCreateAccount?: () => void;
 }
 
-export const Layout = ({ content }: LayoutProps) => (
+export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
-    <div className="storybook-layout">
+    <div className="storybook-header">
       <div>
         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fillRule="evenodd">
@@ -33,22 +37,20 @@ export const Layout = ({ content }: LayoutProps) => (
         <h1>Acme</h1>
       </div>
       <div>
+        {user ? (
           <>
-            <Button primary size="small" label="Useless button" />
+            <span className="welcome">
+              Welcome, <b>{user.name}</b>!
+            </span>
+            <Button size="small" onClick={onLogout} label="Log out" />
           </>
+        ) : (
+          <>
+            <Button size="small" onClick={onLogin} label="Log in" />
+            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+          </>
+        )}
       </div>
     </div>
   </header>
 );
-
-// const Layout = ({ children }) => {
-//   return (
-//     <>
-//       <Header />
-//         {children}
-//       <Footer />
-//     </>
-//   )
-// }
-
-// export default Layout;

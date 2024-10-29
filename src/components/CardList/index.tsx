@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '../Button/Button';
-import { Card } from '../Card/Card';
+import { Button } from '../Button';
+import { Card } from '../Card';
 import './cardlist.css';
 
 type CardContent = {
