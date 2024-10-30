@@ -1,6 +1,7 @@
 import React from "react";
 import "./button.css";
-import { Button as NextButton } from "@nextui-org/button";
+import { Button as NextButton } from "@nextui-org/react";
+import { buttonStyles } from './button.css'
 
 interface ButtonProps {
   /** Is this the principal call to action on the page? */
@@ -36,15 +37,16 @@ const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
+  // const mode = primary
+  //   ? "storybook-button--primary"
+  //   : "storybook-button--secondary";
   return (
     <NextButton
       color={color}
       size={size}
       radius={radius}
       variant={variant}
+      styles={buttonStyles}
       onClick={onClick}
       {...props}
     >
