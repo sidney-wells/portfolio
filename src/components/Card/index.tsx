@@ -9,7 +9,7 @@ interface CardProps {
 
 export const Card = ({ imageObject, buttonObject, ...props }: CardProps) => {
   const { src, alt, link, width, height, ...imageProps } = imageObject;
-  const { color, size, label, onClick, ...buttonProps } = buttonObject;
+  // const { color, size, children, onClick, ...buttonProps } = buttonObject;
   // if (empty) {
   //   return (
   //     <div className={['storybook-card'].join(' ')} {...props}>

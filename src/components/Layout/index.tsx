@@ -34,7 +34,7 @@ export const Layout = ({ content }: LayoutProps) => (
       </div>
       <div>
           <>
-            <Button primary size="small" label="Useless button" />
+            {/* <Button primary size="small" label="Useless button" /> */}
           </>
       </div>
     </div>

@@ -30,10 +30,19 @@ type Story = StoryObj<typeof meta>;
 
 export const Single: Story = {
   args: {
-    content: {
-      image: "./styling.png",
-      description: "This is the description",
+    imageObject: {
+      src: "./styling.png",
+      alt: "This is the description",
       link: "https://wwww.google.com",
+      width: 150,
+      height: 150
     },
+    buttonObject: {
+      color: 'default',
+      size: 'sm',
+      variant: 'faded',
+      className: 'hi',
+      children: 'Button'
+    }
   },
 };
