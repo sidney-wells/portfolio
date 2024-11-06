@@ -11,11 +11,11 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "center",
   },
-  args: {
+  // args: {
     // onLogin: fn(),
     // onLogout: fn(),
     // onCreateAccount: fn(),
-  },
+  // },
 } satisfies Meta<typeof CardList>;
 
 export default meta;
@@ -26,15 +26,37 @@ export const Primary: Story = {
     empty: false,
     cards: [
       {
-        image: "",
-        description: "",
-        link: "",
+        imageObject: {
+          src: "./styling.png",
+          alt: "This is the description",
+          link: "https://wwww.google.com",
+          width: 150,
+          height: 150
+        },
+        buttonObject: {
+          color: 'default',
+          size: 'sm',
+          variant: 'faded',
+          className: 'hi',
+          children: 'Button'
+        }
       },
       {
-        image: "",
-        description: "",
-        link: "",
-      },
+        imageObject: {
+          src: "./styling.png",
+          alt: "This is the description",
+          link: "https://wwww.google.com",
+          width: 150,
+          height: 150
+        },
+        buttonObject: {
+          color: 'default',
+          size: 'sm',
+          variant: 'faded',
+          className: 'hi',
+          children: 'Button'
+        }
+      } 
     ],
   },
 };

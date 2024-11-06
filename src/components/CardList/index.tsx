@@ -14,7 +14,7 @@ type CardProps = {
 //   link: string;
 // };
 
-export interface CardListProps {
+interface CardListProps {
   cards: CardProps[];
   empty: boolean;
 }
@@ -36,17 +36,17 @@ export interface CardListProps {
 // };
 
 export const CardList = ({ empty, cards, ...props }: CardListProps) => {
-  // if (empty) {
-  //   return (
-  //     <div className={["storybook-card"].join(" ")} {...props}>
-  //       <Button label="Hello this is a button" />
-  //     </div>
-  //   );
-  // } else {
+  if (empty) {
+    return (
+      <div className={["storybook-card"].join(" ")} {...props}>
+        hello
+      </div>
+    );
+  } else {
     {
       cards.forEach((card) => {
         return <Card buttonObject={card.buttonObject} imageObject={card.imageObject} {...props} />;
       });
     }
-  // }
+  }
 };
