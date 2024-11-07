@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
-import { Card } from ".";
+import { Card } from "../utils/index.js";
+
 
 const meta = {
   title: "Example/Card",
@@ -11,18 +12,15 @@ const meta = {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "center",
     background: {
-      values: [
-        { name: "Light", value: "white" },
-        { name: "Dark", value: "#333" },
-      ],
-      default: "Dark",
+      // values: [
+      //   { name: "Light", value: "white" },
+      //   { name: "Dark", value: "#333" },
+      // ],
+      // default: "Light",
     },
   },
-  args: {
-    // onLogin: fn(),
-    // onLogout: fn(),
-    // onCreateAccount: fn(),
-  },
+  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
+  // args: { onClick: fn() },
 } satisfies Meta<typeof Card>;
 
 export default meta;
@@ -38,11 +36,10 @@ export const Single: Story = {
       height: 150
     },
     buttonObject: {
-      color: 'default',
-      size: 'sm',
-      variant: 'faded',
-      className: 'hi',
-      children: 'Button'
-    }
+      primary: true,
+      size: 'medium',
+      label: 'Button'
+    },
+    description: "Hi this is a card"
   },
 };

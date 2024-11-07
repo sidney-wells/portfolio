@@ -1,5 +1,5 @@
 const imageStyle = {
-  maxWidth: '60%',
+  maxWidth: '100%',
   borderRadius: '50%'
 }
 

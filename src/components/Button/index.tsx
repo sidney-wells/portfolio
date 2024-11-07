@@ -1,35 +1,25 @@
 import React from "react";
 import "./button.css";
-import { Button as NextButton } from "@nextui-org/react";
 
 interface ButtonProps {
   /** Is this the principal call to action on the page? */
   primary?: boolean;
-  /** Color version of button */
-  color: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  /** Radius of the button */
-  radius?: "sm" | "md" | "lg" | "none" | "full";
+  /** What background color to use */
+  backgroundColor?: string;
   /** How large should the button be? */
-  size?: "sm" | "md" | "lg";
-  /** Variant type */
-  variant?: "faded" | "bordered" | "light" | "flat" | "ghost" | "shadow";
-  /** Classname applies css to component */
-  className: string;
-  /** Text inside button */
-  children: string;
+  size?: 'small' | 'medium' | 'large';
+  /** Button contents */
+  label: string;
   /** Optional click handler */
   onClick?: () => void;
 }
 
 /** Primary UI component for user interaction */
 const Button = ({
-  primary,
-  color,
-  size,
-  radius,
-  variant,
-  className,
-  children,
+  primary = false,
+  size = 'medium',
+  backgroundColor,
+  label,
   onClick,
   ...props
 }: ButtonProps) => {
@@ -37,18 +27,20 @@ const Button = ({
     ? "storybook-button--primary"
     : "storybook-button--secondary";
   return (
-    <NextButton
-      color={color}
-      size={size}
-      radius={radius}
-      variant={variant}
+    <button
       onClick={onClick}
-      className={['storybook-button'].join(' ')}
+      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}      
       {...props}
     >
-      {children}
-    </NextButton>
+      {label}
+      <style jsx>{`
+        button {
+          background-color: ${backgroundColor};
+        }
+      `}</style>
+    </button>
   );
 };
+
 
 export { Button, type ButtonProps };

@@ -34,12 +34,11 @@ export const Primary: Story = {
           height: 150
         },
         buttonObject: {
-          color: 'default',
-          size: 'sm',
-          variant: 'faded',
-          className: 'hi',
-          children: 'Button'
-        }
+          primary: true,
+          size: 'medium',
+          label: 'Button'
+        },
+        description: "This is a story card number 1"
       },
       {
         imageObject: {
@@ -50,12 +49,10 @@ export const Primary: Story = {
           height: 150
         },
         buttonObject: {
-          color: 'default',
-          size: 'sm',
-          variant: 'faded',
-          className: 'hi',
-          children: 'Button'
-        }
+          label: 'Button',
+          size: 'medium'
+        },
+        description: "This is a story card number 2"
       } 
     ],
   },

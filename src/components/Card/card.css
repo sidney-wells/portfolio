@@ -1,5 +1,5 @@
 .storybook-card {
-  /* border: 50px solid #333(0, 0%, 80%); */
+  /* border: 50px solid #333(0, 0%, 80%);
   border: 1px solid #333(0, 0%, 80%);
   border-radius: 10px;
   box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
@@ -8,7 +8,24 @@
   text-align: center;
   max-width: 250px;
   display: inline-block;
-  /* background-color: black; */
+  background-color: white;  */
+  
+  border: 50px solid #333(0, 0%, 80%);
+  /* border: 1px solid #333(0, 0%, 80%); */
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  padding: 20px;
+  margin: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  /* place-items: center; */
+  /* text-align: center; */
+  max-width: 250px;
+  background-color: white; 
   
   /* display: flex;
   justify-content: space-between;
@@ -18,14 +35,25 @@
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
 }
 
+.storybook-card-image {
+  align-self: center;
+  margin: auto;
+}
 
+.storybook-card-button {
+  margin: auto;
+}
 
-/* .storybook-card svg {
+.storybook-card-description {
+  margin: auto;
+}
+
+.storybook-card svg {
   display: inline-block;
   vertical-align: top;
 }
 
-.storybook-card h1 {
+/* .storybook-card h1 {
   display: inline-block;
   vertical-align: top;
   margin: 6px 0 6px 10px;
