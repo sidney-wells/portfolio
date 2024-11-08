@@ -32,7 +32,7 @@ export const Single: Story = {
       src: "./styling.png",
       alt: "This is the description",
       link: "https://wwww.google.com",
-      width: 250,
+      width: 150,
       height: 150
     },
     buttonObject: {
@@ -40,6 +40,7 @@ export const Single: Story = {
       size: 'medium',
       label: 'Button'
     },
-    description: "Hi this is a card"
+    description: "This is a story card number 1",
+    skills: ['one', 'two']
   },
 };

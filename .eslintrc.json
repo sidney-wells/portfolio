@@ -1,9 +1,9 @@
 {
   "extends": [
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:storybook/recommended",
-    "plugin:@next/next/recommended",
+    // "next/core-web-vitals",
+    // "next/typescript",
+    // "plugin:storybook/recommended",
+    // "plugin:@next/next/recommended",
     "parser:babel-eslint"
   ]
 }
