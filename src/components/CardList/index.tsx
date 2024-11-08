@@ -1,12 +1,12 @@
 import React from "react";
 import { ButtonProps, Card, ImageProps } from "../utils/index.js";
-
 import "./cardlist.css";
 
 type CardProps = {
   imageObject: ImageProps;
   buttonObject: ButtonProps;
   description: string;
+  skills: string[];
 };
 
 interface CardListProps {
@@ -29,6 +29,7 @@ export const CardList = ({ empty, cards, ...props }: CardListProps) => {
             buttonObject={card.buttonObject}
             imageObject={card.imageObject}
             description={card.description}
+            skills={card.skills}
             key={i}
             {...props}
           />

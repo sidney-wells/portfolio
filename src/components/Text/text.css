@@ -1,0 +1,19 @@
+.storybook-text {
+  font-family: sans-serif;
+  color: #333;
+}
+
+.storybook-text--primary {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.storybook-text--small {
+    font-weight: 300;
+    font-size: 10px;
+}
+
+.storybook-text--large {
+    font-weight: 700;
+    font-size: 32px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonProps, Image, ImageProps } from "../utils/index.js";
+import { ButtonProps, Image, ImageProps } from "../utils/index.js";
 import "./card.css";
 
 interface CardProps {
@@ -9,20 +9,23 @@ interface CardProps {
   buttonObject: ButtonProps;
   /** Description displayed on the card */
   description: string;
+  /** List of skills relevant to project */
+  skills: string[];
 }
 
 export const Card = ({
   imageObject,
   buttonObject,
   description,
+  skills,
   ...props
 }: CardProps) => {
   const { src, alt, link, width, height, ...imageProps } = imageObject;
   const { primary, backgroundColor, size, label, onClick, ...buttonProps } =
     buttonObject;
   return (
-    <div className={["storybook-card"].join(" ")} {...props}>
-      <div className={["storybook-card-image"].join(" ")}>
+    <div className="storybook-card" {...props}>
+      <div className="storybook-card-image">
         <Image
           src={src}
           alt={alt}
@@ -32,7 +35,7 @@ export const Card = ({
           {...imageProps}
         />
       </div>
-      <div className={["storybook-card-button"].join(" ")}>
+      {/* <div className={["storybook-card-button"].join(" ")}>
         <Button
           primary={primary}
           backgroundColor={backgroundColor}
@@ -40,9 +43,12 @@ export const Card = ({
           onClick={onClick}
           {...buttonProps}
         />
-      </div>
-      <div className={["storybook-card-description"].join(" ")}>
+      </div> */}
+      <div className="storybook-card-description">
         {description}
+      </div>
+      <div className="storybook-card-tags">
+        {/* <TagList skills={skills} /> */}
       </div>
     </div>
   );

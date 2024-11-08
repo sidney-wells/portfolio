@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
-import { CardList } from ".";
+import { CardList } from "../utils/index.js";
+
 
 const meta = {
   title: "Example/CardList",
@@ -38,7 +39,8 @@ export const Primary: Story = {
           size: 'medium',
           label: 'Button'
         },
-        description: "This is a story card number 1"
+        description: "This is a story card number 1",
+        skills: ['one', 'two']
       },
       {
         imageObject: {
@@ -52,7 +54,8 @@ export const Primary: Story = {
           label: 'Button',
           size: 'medium'
         },
-        description: "This is a story card number 2"
+        description: "This is a story card number 2",
+        skills: ['one', 'two']
       } 
     ],
   },

@@ -32,7 +32,7 @@ export const Single: Story = {
       src: "./styling.png",
       alt: "This is the description",
       link: "https://wwww.google.com",
-      width: 150,
+      width: 250,
       height: 150
     },
     buttonObject: {
