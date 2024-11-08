@@ -16,19 +16,16 @@ export const TagList = ({ empty, skills, ...props }: TagListProps) => {
   if (empty) {
     return (
       <div className={["storybook-card"].join(" ")} {...props}>
-        hello
+        hello my name is Sidney
       </div>
     );
   } else {
-    {
-      skills.forEach((skill, i) => {
-        return (
-          <div>
-            m
-            <Text text={skill.text} size={skill.size} key={i} {...props} />
-          </div>
-        );
-      });
-    }
+    return (
+      <div>
+        {skills.map((skill, i) => (
+          <Text text={skill.text} size={skill.size} key={i} {...props} />
+        ))}
+      </div>
+    );
   }
 };

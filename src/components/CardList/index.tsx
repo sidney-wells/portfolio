@@ -22,9 +22,9 @@ export const CardList = ({ empty, cards, ...props }: CardListProps) => {
       </div>
     );
   } else {
-    {
-      cards.forEach((card, i) => {
-        return (
+    return (
+      <div>
+        {cards.map((card, i) => (
           <Card
             buttonObject={card.buttonObject}
             imageObject={card.imageObject}
@@ -33,8 +33,8 @@ export const CardList = ({ empty, cards, ...props }: CardListProps) => {
             key={i}
             {...props}
           />
-        );
-      });
-    }
+        ))}
+      </div>
+    );
   }
 };

@@ -52,4 +52,11 @@ yarn -v # 1.22.22
 Install storybook
 ```
 npx storybook@latest init
+* then verify
+
+```
+
+Verify Next JS version
+```
+npx next -v #14.2.17
 ```

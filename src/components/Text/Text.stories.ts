@@ -9,7 +9,7 @@ const meta = {
   tags: ["autodocs"],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: "center",
+    layout: "centered",
   },
   args: {
     // onLogin: fn(),
