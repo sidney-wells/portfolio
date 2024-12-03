@@ -33,7 +33,7 @@ export const Primary: Story = {
     src: "./styling.png",
     alt: "This is the image alt",
     link: "https://www.google.com",
-    width: 150,
-    height: 150
+    width: 300,
+    height: 200
   },
 };

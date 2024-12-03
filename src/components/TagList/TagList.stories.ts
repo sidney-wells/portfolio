@@ -23,18 +23,17 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    empty: false,
     skills: [
       {
-        text: "one skill",
+        text: "AWS",
         size: 'small'
       },
       {
-        text: "two skill",
+        text: "React",
         size: 'small'
       },
       {
-        text: "three skill",
+        text: "Javascript",
         size: 'small'
       },
     ],

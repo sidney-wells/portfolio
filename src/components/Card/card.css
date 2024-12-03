@@ -50,7 +50,7 @@
 }
 
 .storybook-card-description {
-  margin: auto;
+  /* margin: auto; */
   flex: 1;
 }
 

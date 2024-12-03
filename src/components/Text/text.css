@@ -3,14 +3,19 @@
   color: #333;
 }
 
+.storybook-text-taglist {
+    font-family: sans-serif;
+    color: #ede9e9;
+  }
+
 .storybook-text--primary {
     font-weight: 500;
     font-size: 16px;
 }
 
 .storybook-text--small {
-    font-weight: bold;
-    font-size: 10px;
+    font-weight: 200;
+    font-size: 12px;
 }
 
 .storybook-text--large {

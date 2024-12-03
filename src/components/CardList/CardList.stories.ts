@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
 import { CardList } from "../utils/index.js";
 
-
 const meta = {
   title: "Example/CardList",
   component: CardList,
@@ -13,9 +12,9 @@ const meta = {
     layout: "centered",
   },
   // args: {
-    // onLogin: fn(),
-    // onLogout: fn(),
-    // onCreateAccount: fn(),
+  // onLogin: fn(),
+  // onLogout: fn(),
+  // onCreateAccount: fn(),
   // },
 } satisfies Meta<typeof CardList>;
 
@@ -31,32 +30,115 @@ export const Primary: Story = {
           src: "./styling.png",
           alt: "This is the description",
           link: "https://wwww.google.com",
-          width: 150,
-          height: 150
+          width: 300,
+          height: 200,
         },
         buttonObject: {
           primary: true,
-          size: 'medium',
-          label: 'Button'
+          size: "medium",
+          label: "Button",
         },
         description: "This is a story card number 1",
-        skills: ['one', 'two']
+        skills: [
+          {
+            text: "AWS",
+            size: "small",
+          },
+          {
+            text: "React",
+            size: "small",
+          },
+          {
+            text: "Javascript",
+            size: "small",
+          },
+        ],
       },
       {
         imageObject: {
           src: "./styling.png",
           alt: "This is the description",
           link: "https://wwww.google.com",
-          width: 150,
-          height: 150
+          width: 300,
+          height: 200,
         },
         buttonObject: {
-          label: 'Button',
-          size: 'medium'
+          label: "Button",
+          size: "medium",
         },
         description: "This is a story card number 2",
-        skills: ['one', 'two']
-      } 
+        skills: [
+          {
+            text: "AWS",
+            size: "small",
+          },
+          {
+            text: "React",
+            size: "small",
+          },
+          {
+            text: "Javascript",
+            size: "small",
+          },
+        ],
+      },
+      {
+        imageObject: {
+          src: "./styling.png",
+          alt: "This is the description",
+          link: "https://wwww.google.com",
+          width: 300,
+          height: 200,
+        },
+        buttonObject: {
+          primary: true,
+          size: "medium",
+          label: "Button",
+        },
+        description: "This is a story card number 1",
+        skills: [
+          {
+            text: "AWS",
+            size: "small",
+          },
+          {
+            text: "React",
+            size: "small",
+          },
+          {
+            text: "Javascript",
+            size: "small",
+          },
+        ],
+      },
+      {
+        imageObject: {
+          src: "./styling.png",
+          alt: "This is the description",
+          link: "https://wwww.google.com",
+          width: 300,
+          height: 200,
+        },
+        buttonObject: {
+          label: "Button",
+          size: "medium",
+        },
+        description: "This is a story card number 2",
+        skills: [
+          {
+            text: "AWS",
+            size: "small",
+          },
+          {
+            text: "React",
+            size: "small",
+          },
+          {
+            text: "Javascript",
+            size: "small",
+          },
+        ]
+      }
     ],
   },
 };

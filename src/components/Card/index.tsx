@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonProps, Image, ImageProps } from "../utils/index.js";
+import { ButtonProps, Image, ImageProps, TagList, TextProps } from "../utils/index.js";
 import "./card.css";
 
 interface CardProps {
@@ -10,7 +10,7 @@ interface CardProps {
   /** Description displayed on the card */
   description: string;
   /** List of skills relevant to project */
-  skills: string[];
+  skills: TextProps[];
 }
 
 export const Card = ({
@@ -35,20 +35,11 @@ export const Card = ({
           {...imageProps}
         />
       </div>
-      {/* <div className={["storybook-card-button"].join(" ")}>
-        <Button
-          primary={primary}
-          backgroundColor={backgroundColor}
-          label={label}
-          onClick={onClick}
-          {...buttonProps}
-        />
-      </div> */}
       <div className="storybook-card-description">
         {description}
       </div>
       <div className="storybook-card-tags">
-        {/* <TagList skills={skills} /> */}
+        <TagList skills={skills} />
       </div>
     </div>
   );

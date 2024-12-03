@@ -1,12 +1,12 @@
 import React from "react";
-import { ButtonProps, Card, ImageProps } from "../utils/index.js";
+import { ButtonProps, Card, ImageProps, TextProps } from "../utils/index.js";
 import "./cardlist.css";
 
 type CardProps = {
   imageObject: ImageProps;
   buttonObject: ButtonProps;
   description: string;
-  skills: string[];
+  skills: TextProps[];
 };
 
 interface CardListProps {
@@ -23,7 +23,7 @@ export const CardList = ({ empty, cards, ...props }: CardListProps) => {
     );
   } else {
     return (
-      <div>
+      <div className="storybook-cardlist">
         {cards.map((card, i) => (
           <Card
             buttonObject={card.buttonObject}

@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 // import { fn } from '@storybook/test';
 import { Card } from "../utils/index.js";
 
-
 const meta = {
   title: "Example/Card",
   component: Card,
@@ -32,15 +31,28 @@ export const Single: Story = {
       src: "./styling.png",
       alt: "This is the description",
       link: "https://wwww.google.com",
-      width: 150,
-      height: 150
+      width: 300,
+      height: 200,
     },
     buttonObject: {
       primary: true,
-      size: 'medium',
-      label: 'Button'
+      size: "medium",
+      label: "Button",
     },
     description: "This is a story card number 1",
-    skills: ['one', 'two']
+    skills: [
+      {
+        text: "AWS",
+        size: "small",
+      },
+      {
+        text: "React",
+        size: "small",
+      },
+      {
+        text: "Javascript",
+        size: "small",
+      },
+    ],
   },
 };

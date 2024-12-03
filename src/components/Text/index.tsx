@@ -6,9 +6,11 @@ interface TextProps {
   text: string;
   /** Size of text */
   size: "primary" | "small" | "large";
+  /** Change text color if taglist */
+  taglist?: boolean
 }
 
-export const Text = ({ text, size, ...props }: TextProps) => {
+export const Text = ({ taglist, text, size, ...props }: TextProps) => {
   let variant = "primary";
   switch (size) {
     case "small":
@@ -23,7 +25,7 @@ export const Text = ({ text, size, ...props }: TextProps) => {
 
   return (
     <div
-      className={["storybook-text", `storybook-text--${variant}`].join(" ")}
+      className={taglist ? ["storybook-text-taglist", `storybook-text--${variant}`].join(" ") : ["storybook-text", `storybook-text--${variant}`].join(" ")}
       {...props}
     >
       {text}

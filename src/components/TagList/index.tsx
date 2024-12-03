@@ -9,23 +9,18 @@ type TextProps = {
 
 interface TagListProps {
   skills: TextProps[];
-  empty: boolean;
 }
 
-export const TagList = ({ empty, skills, ...props }: TagListProps) => {
-  if (empty) {
-    return (
-      <div className={["storybook-card"].join(" ")} {...props}>
-        hello my name is Sidney
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        {skills.map((skill, i) => (
-          <Text text={skill.text} size={skill.size} key={i} {...props} />
-        ))}
-      </div>
-    );
-  }
+const TagList = ({ skills, ...props }: TagListProps) => {
+  return (
+    <div className="storybook-taglist">
+      {skills.map((skill, i) => (
+        <div className="storybook-skill">
+          <Text text={skill.text} size={skill.size} key={i} taglist {...props} />
+        </div>
+      ))}
+    </div>
+  );
 };
+
+export { TagList, type TextProps }
